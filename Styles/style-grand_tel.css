@@ -1,0 +1,21 @@
+.mobile img:nth-child(1) {  transform: translateY(-17%); }
+
+.mobile div:nth-child(2) {
+    transform: translate(0%, 44%) !important;
+}
+
+.mobile div:nth-child(3) {
+    transform: translate(-15%, 7%) !important;
+}
+
+.mobile div:nth-child(4) {
+    transform: translate(-15%, 44%) !important;
+}
+
+.mobile div:nth-child(5) {
+    transform: translate(-15%, 20%) !important;
+}
+
+.mobile div:nth-child(6) {
+    transform: translate(0%, 20%) !important;
+}
