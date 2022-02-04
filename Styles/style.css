@@ -31,11 +31,14 @@ svg{
     stroke: none;
 }
 
-.mobile>img:nth-child(1) {
+.mobile>.fondEcran>img {
     width: 100%;
 }
+.mobile>.fondEcran>img[alt="img de fond ordi"] {
+    display: none;
+}
 
-.mobile div {
+.mobile .conteneurApp {
     font-family: 'Syncopate', sans-serif;
     width: 100%;
     display: grid;
@@ -57,48 +60,64 @@ svg{
     }
 }
 
-.mobile div a {
+.mobile .conteneurApp a {
     text-decoration: none;
     color: black;
     pointer-events: visible;
 }
 
-.mobile div img {
+.mobile .conteneurApp img {
     width: 10%;
+    pointer-events: visible;
     animation: flotte infinite alternate-reverse linear;
     animation-duration: calc(var(--temps));
-    /* animation-duration: 5s; */
-    /* animation-delay: calc(var(--temps)); */
 }
 
-.mobile div:nth-child(2) {
+.mobile .conteneurApp:nth-child(2) {
     transform: translate(0%, 60%);
 }
 
-.mobile div:nth-child(3) {
+.mobile .conteneurApp:nth-child(3) {
     transform: translate(-15%, 24%);
 }
 
-.mobile div:nth-child(4) {
+.mobile .conteneurApp:nth-child(4) {
     transform: translate(-15%, 60%);
 }
 
-.mobile div:nth-child(5) {
+.mobile .conteneurApp:nth-child(5) {
     transform: translate(-15%, 37%);
 }
 
-.mobile div:nth-child(6) {
+.mobile .conteneurApp:nth-child(6) {
     transform: translate(0%, 37%);
 }
 
 #deux {
     height: 100vh;
+    display: grid;
+    justify-items: center;
+    
+}
+
+#deux > * {
+    align-self: start;
 }
 
 .test{
-    width: 10%;
+    width: 80%;
     animation: venu 0.5s linear;
     color: wheat;
+}
+
+.photoMoi{
+    width: 200px;
+    height: 200px;    
+}
+.photoMoi>img{
+    width: 100%;
+    border-radius: 25%;
+    animation: venu 0.5s linear;
 }
 @keyframes venu {
     0%{

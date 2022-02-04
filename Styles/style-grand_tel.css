@@ -1,21 +1,60 @@
-.mobile img:nth-child(1) {  transform: translateY(-17%); }
+.mobile>.fondEcran>img:nth-child(1) {
+    transform: translateY(-17%);
+}
 
-.mobile div:nth-child(2) {
+.mobile .conteneurApp:nth-child(2) {
     transform: translate(0%, 44%) !important;
 }
 
-.mobile div:nth-child(3) {
+.mobile .conteneurApp:nth-child(3) {
     transform: translate(-15%, 7%) !important;
 }
 
-.mobile div:nth-child(4) {
+.mobile .conteneurApp:nth-child(4) {
     transform: translate(-15%, 44%) !important;
 }
 
-.mobile div:nth-child(5) {
+.mobile .conteneurApp:nth-child(5) {
     transform: translate(-15%, 20%) !important;
 }
 
-.mobile div:nth-child(6) {
+.mobile .conteneurApp:nth-child(6) {
     transform: translate(0%, 20%) !important;
 }
+
+
+/*@media screen and (min-width: 614px) {
+    .mobile>.fondEcran>img:nth-child(1) {
+        display: none;
+    }
+
+    .mobile>.fondEcran>img[alt="img de fond ordi"] {
+        display: initial !important;
+        width: 165%;
+        transform: translateX(-22%);
+    }
+
+    .mobile .conteneurApp img {
+        width: 6% !important;
+    }
+
+    .mobile .conteneurApp:nth-child(2) {
+        transform: translate(-15%, 53%) !important;
+    }
+    
+    .mobile .conteneurApp:nth-child(3) {
+        transform: translate(-28%, 30%) !important;
+    }
+    
+    .mobile .conteneurApp:nth-child(4) {
+        transform: translate(-28%, 53%) !important;
+    }
+    
+    .mobile .conteneurApp:nth-child(5) {
+        transform: translate(-28%, 42%) !important;
+    }
+    
+    .mobile .conteneurApp:nth-child(6) {
+        transform: translate(-15%, 42%) !important;
+    }
+}/*

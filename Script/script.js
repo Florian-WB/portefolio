@@ -18,37 +18,102 @@ function addClass() {
                     e.dataset.timer = "";
                 }, e.dataset.delay || 0)
             }
-        } /*else {
+        } else {
             if (e.dataset.timer) clearTimeout(e.dataset.timer);
             e.classList.remove(e.dataset.class);
-        }*/
+        }
     })
 }
 window.addEventListener("scroll", addClass, { passive: true });
 addClass();
 
+
+
 //Changer l'image quand plus un téléphone
-function imageChange() {
-    /*var img1 = document.querySelector("img[alt='img de fond'");
-    var styleImg = getComputedStyle(img1);
-    var transformStyle = styleImg.transformTranslate;
-    var widthStyle = styleImg.width;
-    console.log(transformStyle);
-    console.log(widthStyle);*/
+/*function imageChange() {
 
     if (window.innerWidth > "644") {
         var e = document.querySelector("img[alt='img de fond'");
         e.setAttribute("src", "Photos/ordi fond ecran.jpg");
-        /*e.style.transform = "translate(-23%, -18%)";
-        e.style.width = "175%";*/
     }
     else {
         var f = document.querySelector("img[alt='img de fond'");
         f.setAttribute("src", "Photos/mobile-fond-ecran.jpg");
-        /*f.style.transform = transformStyle;
-        f.style.width = widthStyle;*/
     }
 }
 window.addEventListener("resize", imageChange);
-imageChange();
+imageChange();*/
 
+
+
+//Ouvrir un lien au click de l'image
+document.querySelectorAll(".conteneurApp>img").forEach(e => {
+    e.addEventListener("click", () => {
+        console.log(e);
+        var lien = e.nextElementSibling.getAttribute("href");
+        window.open(lien, "_parent");
+    })
+})
+
+
+//Changer % taille d'image fond d'écran
+
+// document.querySelector("body").addEventListener("click", () => {
+
+// function Taillewidth() {
+//     var largeur = self.innerWidth;
+//     console.log("largeur ecran : "+largeur);
+//     var deltaWidth = self.innerWidth - "614";
+//     var tailleWidth = "165" - deltaWidth/10;
+//     if (tailleWidth <= 100){
+//         tailleWidth = 100;
+//     }
+//     console.log("delta : "+deltaWidth);
+//     console.log("--tailleW : "+tailleWidth);
+//     document.querySelector("img[alt='img de fond ordi']").style.setProperty(("--tailleW"), tailleWidth + "%");
+// }
+// window.addEventListener("load", Taillewidth, { passive: true });
+// Taillewidth();
+
+// });
+
+function SetPropert() {
+
+    if (self.innerWidth < 770) {
+        var WidthImg = 0;
+        var TranslateImg = 0;
+        var TranslatePtitImg = 0;
+
+    }
+    if (self.innerWidth >= 770) {
+        var WidthImg = 30;
+        var TranslateImg = 10;
+        var TranslatePtitImg = 10;
+    }
+    if (self.innerWidth >= 942) {
+        var WidthImg = 50;
+        var WidthPtitImg = 2;
+        var TranslateImg = 10;
+        var TranslatePtitImg = 5;
+    }
+    if (self.innerWidth >= 1080) {
+        var WidthImg = 65;
+        var TranslateImg = 22;
+        var TranslatePtitImg = 14;
+    }
+    if (self.innerWidth >= 1266) {
+        var WidthImg = 65;
+        var TranslateImg = 22;
+        var TranslatePtitImg = 14;
+    }
+
+    document.querySelector("img[alt='img de fond ordi']").style.setProperty(("--WidthImg"), WidthImg + "%");
+    document.querySelector("img[alt='img de fond ordi']").style.setProperty(("--TranslateImg"), TranslateImg + "%");
+    document.querySelectorAll(".conteneurApp").forEach((e) => {e.style.setProperty(("--TranslatePtitImg"), TranslatePtitImg + "%");});
+    document.querySelectorAll(".conteneurApp").forEach((e) => {
+        e.querySelector("img").style.setProperty(("--WidthPtitImg"), WidthPtitImg + "%");
+    });
+    console.log(WidthImg);
+    console.log(TranslateImg);
+}
+window.addEventListener("load", SetPropert)

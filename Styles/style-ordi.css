@@ -1,7 +1,40 @@
-/*.mobile{
-    display: none !important;
+.mobile>.fondEcran>img:nth-child(1) {
+    display: none;
 }
 
-.ordi{
-    display: grid !important;
-}*/
+.mobile>.fondEcran>img[alt="img de fond ordi"] {
+    display: initial !important;
+    width: calc(165% - var(--WidthImg));
+    transform: translateX(calc(-22% + var(--TranslateImg)));
+}
+
+.mobile .conteneurApp img {
+    width: calc(6% - var(--WidthPtitImg)) !important;
+}
+
+.mobile .conteneurApp:nth-child(2) {
+    transform: translate(calc(-15% + var(--TranslatePtitImg)), 53%) !important;
+}
+
+.mobile .conteneurApp:nth-child(3) {
+    transform: translate(calc(-28% + var(--TranslatePtitImg)), 30%) !important;
+}
+
+.mobile .conteneurApp:nth-child(4) {
+    transform: translate(calc(-28% + var(--TranslatePtitImg)), 53%) !important;
+}
+
+.mobile .conteneurApp:nth-child(5) {
+    transform: translate(calc(-28% + var(--TranslatePtitImg)), 42%) !important;
+}
+
+.mobile .conteneurApp:nth-child(6) {
+    transform: translate(calc(-15% + var(--TranslatePtitImg)), 42%) !important;
+}
+
+@media screen and (min-width: 1266px) {
+    .mobile>.fondEcran>img[alt="img de fond ordi"] {
+        transform: translate(-0%, -20%);
+
+    }
+}
