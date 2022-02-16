@@ -6,6 +6,7 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: #242327;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .ordi {
@@ -23,7 +24,7 @@ body {
     grid-row: 1;
 }
 
-svg{
+svg {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,6 +35,7 @@ svg{
 .mobile>.fondEcran>img {
     width: 100%;
 }
+
 .mobile>.fondEcran>img[alt="img de fond ordi"] {
     display: none;
 }
@@ -94,45 +96,52 @@ svg{
 }
 
 #deux {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     justify-items: center;
-    
+    background-color: rgb(248, 234, 234);
 }
 
-#deux > * {
+.bulle {
+    position: absolute;
+    top: 100%;
+    border-radius: 100%;
+    background-color: antiquewhite;
+    animation: haut 4.5s;
+}
+
+@keyframes haut {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-200vh);
+    }
+}
+
+#deux>* {
     align-self: start;
 }
 
-.test{
+.test {
     width: 80%;
     animation: venu 0.5s linear;
-    color: wheat;
+    color: rgb(32, 33, 34);
 }
 
-.photoMoi{
+.photoMoi {
     width: 200px;
-    height: 200px;    
 }
-.photoMoi>img{
+
+.photoMoi>img {
     width: 100%;
     border-radius: 25%;
-    animation: venu 0.5s linear;
-}
-@keyframes venu {
-    0%{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0%);
-    }
 }
 
-@media screen and (min-width: 645px){
+/*@media screen and (min-width: 645px) {
     .mobile>img:nth-child(1) {
         width: 175%;
         transform: translate(-23%, -18%);
     }
-}
+}*/

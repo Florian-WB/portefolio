@@ -13,28 +13,27 @@
 }
 
 .mobile .conteneurApp:nth-child(2) {
-    transform: translate(calc(-15% + var(--TranslatePtitImg)), 53%) !important;
+    transform: translate(calc(-15% + var(--TranslatePtitImg)), calc(53% - var(--TranslateYPtitImg))) !important;
 }
 
 .mobile .conteneurApp:nth-child(3) {
-    transform: translate(calc(-28% + var(--TranslatePtitImg)), 30%) !important;
+    transform: translate(calc(-28% + var(--TranslatePtitImg)), calc(30% - var(--TranslateYPtitImg))) !important;
 }
 
 .mobile .conteneurApp:nth-child(4) {
-    transform: translate(calc(-28% + var(--TranslatePtitImg)), 53%) !important;
+    transform: translate(calc(-28% + var(--TranslatePtitImg)), calc(53% - var(--TranslateYPtitImg))) !important;
 }
 
 .mobile .conteneurApp:nth-child(5) {
-    transform: translate(calc(-28% + var(--TranslatePtitImg)), 42%) !important;
+    transform: translate(calc(-28% + var(--TranslatePtitImg)), calc(42% - var(--TranslateYPtitImg))) !important;
 }
 
 .mobile .conteneurApp:nth-child(6) {
-    transform: translate(calc(-15% + var(--TranslatePtitImg)), 42%) !important;
+    transform: translate(calc(-15% + var(--TranslatePtitImg)), calc(42% - var(--TranslateYPtitImg))) !important;
 }
 
 @media screen and (min-width: 1266px) {
     .mobile>.fondEcran>img[alt="img de fond ordi"] {
         transform: translate(-0%, -20%);
-
     }
 }

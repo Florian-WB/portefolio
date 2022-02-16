@@ -77,39 +77,48 @@ document.querySelectorAll(".conteneurApp>img").forEach(e => {
 
 // });
 
+// Changement Taille et translate
 function SetPropert() {
 
     if (self.innerWidth < 770) {
         var WidthImg = 0;
+        var WidthPtitImg = 0;
         var TranslateImg = 0;
         var TranslatePtitImg = 0;
+        var TranslateYPtitImg = 0;
 
     }
     if (self.innerWidth >= 770) {
         var WidthImg = 30;
+        var WidthPtitImg = 0;
         var TranslateImg = 10;
         var TranslatePtitImg = 10;
+        var TranslateYPtitImg = 0;
     }
     if (self.innerWidth >= 942) {
         var WidthImg = 50;
         var WidthPtitImg = 2;
         var TranslateImg = 10;
         var TranslatePtitImg = 5;
+        var TranslateYPtitImg = 0;
     }
     if (self.innerWidth >= 1080) {
         var WidthImg = 65;
         var TranslateImg = 22;
         var TranslatePtitImg = 14;
+        var TranslateYPtitImg = 0;
     }
     if (self.innerWidth >= 1266) {
         var WidthImg = 65;
         var TranslateImg = 22;
         var TranslatePtitImg = 14;
+        var TranslateYPtitImg = 20;
     }
 
     document.querySelector("img[alt='img de fond ordi']").style.setProperty(("--WidthImg"), WidthImg + "%");
     document.querySelector("img[alt='img de fond ordi']").style.setProperty(("--TranslateImg"), TranslateImg + "%");
     document.querySelectorAll(".conteneurApp").forEach((e) => {e.style.setProperty(("--TranslatePtitImg"), TranslatePtitImg + "%");});
+    document.querySelectorAll(".conteneurApp").forEach((e) => {e.style.setProperty(("--TranslateYPtitImg"), TranslateYPtitImg + "%");});
     document.querySelectorAll(".conteneurApp").forEach((e) => {
         e.querySelector("img").style.setProperty(("--WidthPtitImg"), WidthPtitImg + "%");
     });
@@ -117,3 +126,4 @@ function SetPropert() {
     console.log(TranslateImg);
 }
 window.addEventListener("load", SetPropert)
+
