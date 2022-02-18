@@ -27,25 +27,6 @@ function addClass() {
 window.addEventListener("scroll", addClass, { passive: true });
 addClass();
 
-
-
-//Changer l'image quand plus un téléphone
-/*function imageChange() {
-
-    if (window.innerWidth > "644") {
-        var e = document.querySelector("img[alt='img de fond'");
-        e.setAttribute("src", "Photos/ordi fond ecran.jpg");
-    }
-    else {
-        var f = document.querySelector("img[alt='img de fond'");
-        f.setAttribute("src", "Photos/mobile-fond-ecran.jpg");
-    }
-}
-window.addEventListener("resize", imageChange);
-imageChange();*/
-
-
-
 //Ouvrir un lien au click de l'image
 document.querySelectorAll(".conteneurApp>img").forEach(e => {
     e.addEventListener("click", () => {
@@ -54,28 +35,6 @@ document.querySelectorAll(".conteneurApp>img").forEach(e => {
         window.open(lien, "_parent");
     })
 })
-
-
-//Changer % taille d'image fond d'écran
-
-// document.querySelector("body").addEventListener("click", () => {
-
-// function Taillewidth() {
-//     var largeur = self.innerWidth;
-//     console.log("largeur ecran : "+largeur);
-//     var deltaWidth = self.innerWidth - "614";
-//     var tailleWidth = "165" - deltaWidth/10;
-//     if (tailleWidth <= 100){
-//         tailleWidth = 100;
-//     }
-//     console.log("delta : "+deltaWidth);
-//     console.log("--tailleW : "+tailleWidth);
-//     document.querySelector("img[alt='img de fond ordi']").style.setProperty(("--tailleW"), tailleWidth + "%");
-// }
-// window.addEventListener("load", Taillewidth, { passive: true });
-// Taillewidth();
-
-// });
 
 // Changement Taille et translate
 function SetPropert() {

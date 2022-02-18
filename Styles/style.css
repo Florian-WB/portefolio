@@ -34,6 +34,7 @@ svg {
 
 .mobile>.fondEcran>img {
     width: 100%;
+    height: auto;
 }
 
 .mobile>.fondEcran>img[alt="img de fond ordi"] {
@@ -98,26 +99,9 @@ svg {
 #deux {
     min-height: 100vh;
     display: grid;
+    grid-template-rows : 1fr 1fr 1fr;
     justify-items: center;
     background-color: rgb(248, 234, 234);
-}
-
-.bulle {
-    position: absolute;
-    top: 100%;
-    border-radius: 100%;
-    background-color: antiquewhite;
-    animation: haut 4.5s;
-}
-
-@keyframes haut {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-200vh);
-    }
 }
 
 #deux>* {
@@ -130,18 +114,27 @@ svg {
     color: rgb(32, 33, 34);
 }
 
+@keyframes venu {
+    0% {
+        display: none;
+    }
+
+    100% {
+        display: initial;
+    }
+}
+
 .photoMoi {
     width: 200px;
+    animation: venu 0.5s linear;
+}
+
+img[alt="photo moi"] {
+    display: none;
 }
 
 .photoMoi>img {
     width: 100%;
     border-radius: 25%;
+    display: initial;
 }
-
-/*@media screen and (min-width: 645px) {
-    .mobile>img:nth-child(1) {
-        width: 175%;
-        transform: translate(-23%, -18%);
-    }
-}*/
